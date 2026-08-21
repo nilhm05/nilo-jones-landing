@@ -268,10 +268,10 @@ header.hero{
   opacity:0.55;
   margin-top:4px;
 }
-.b1{animation-delay:.3s;}
-.b2{animation-delay:1.3s;}
-.b3{animation-delay:2.3s;}
-.b4{animation-delay:3.3s;}
+.b1{animation-delay:1.2s;}
+.b2{animation-delay:2.9s;}
+.b3{animation-delay:4.6s;}
+.b4{animation-delay:6.3s;}
 @keyframes rise{
   to{opacity:1; transform:translateY(0);}
 }
@@ -284,7 +284,7 @@ header.hero{
   border-radius:14px;
   border-bottom-left-radius:4px;
   opacity:0;
-  animation:typingFade 4.6s ease infinite;
+  animation:typingFade 6.9s ease infinite;
 }
 .typing span{
   width:6px; height:6px; border-radius:50%;
