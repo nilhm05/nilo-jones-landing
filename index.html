@@ -167,5 +167,25 @@
   Nilo Jones — Automatización para negocios locales
 </footer>
 
+<script>
+(function () {
+  var chat = document.querySelector('.chat');
+  if (!chat) return;
+  if (!('IntersectionObserver' in window)) {
+    chat.classList.add('in-view');
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        chat.classList.add('in-view');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(chat);
+})();
+</script>
+
 </body>
 </html>
