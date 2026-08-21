@@ -429,6 +429,11 @@ header.hero{
   color:var(--text-muted);
   margin:8px 0 20px;
 }
+.price-box .guarantee{
+  font-size:0.8rem;
+  color:var(--accent-mint);
+  margin-top:14px;
+}
 
 @media (max-width:760px){
   .price-card{grid-template-columns:1fr; text-align:left;}
