@@ -160,26 +160,35 @@ header.hero{
 }
 .btn-secondary:hover{border-color:rgba(255,255,255,0.25); transform:translateY(-2px);}
 
-.hero-note{
-  margin-top:28px;
-  font-size:0.85rem;
-  color:var(--text-muted);
-  display:flex;
+.btn-live{
+  margin-top:20px;
+  background:var(--accent-mint);
+  color:var(--bg-base);
+  padding:15px 26px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:0.95rem;
+  display:inline-flex;
   align-items:center;
   gap:10px;
-  transition:color .15s ease;
+  transition:transform .15s ease, box-shadow .15s ease;
 }
-.hero-note:hover{color:var(--text-primary);}
-.hero-note .pulse{
+.btn-live:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(53,208,160,0.4);}
+.btn-live .pulse{
   width:8px; height:8px; border-radius:50%;
-  background:var(--accent-mint);
-  animation:pulse 2s infinite;
+  background:var(--bg-base);
+  animation:pulseDark 2s infinite;
   flex-shrink:0;
 }
 @keyframes pulse{
   0%{box-shadow:0 0 0 0 rgba(53,208,160,0.5);}
   70%{box-shadow:0 0 0 8px rgba(53,208,160,0);}
   100%{box-shadow:0 0 0 0 rgba(53,208,160,0);}
+}
+@keyframes pulseDark{
+  0%{box-shadow:0 0 0 0 rgba(10,13,18,0.4);}
+  70%{box-shadow:0 0 0 8px rgba(10,13,18,0);}
+  100%{box-shadow:0 0 0 0 rgba(10,13,18,0);}
 }
 
 /* ---------- PHONE MOCKUP (signature element) ---------- */
