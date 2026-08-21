@@ -170,7 +170,8 @@
 <script>
 (function () {
   var chat = document.querySelector('.chat');
-  if (!chat) return;
+  var phone = document.querySelector('.phone-stage');
+  if (!chat || !phone) return;
   if (!('IntersectionObserver' in window)) {
     chat.classList.add('in-view');
     return;
@@ -182,8 +183,8 @@
         observer.disconnect();
       }
     });
-  }, { threshold: 0.5 });
-  observer.observe(chat);
+  }, { threshold: 0.18 });
+  observer.observe(phone);
 })();
 </script>
 
