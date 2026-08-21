@@ -249,7 +249,13 @@ header.hero{
   opacity:0;
   transform:translateY(8px);
 }
-.chat.in-view .bubble{
+/* Los dos primeros mensajes se ven desde el primer render -- si no, el
+   movil aparece con un hueco negro hasta que el scroll dispara el resto. */
+.bubble.b1, .bubble.b2{
+  opacity:1;
+  transform:none;
+}
+.chat.in-view .bubble.b3, .chat.in-view .bubble.b4{
   animation:rise .5s ease forwards;
 }
 .bubble.in{
@@ -270,10 +276,8 @@ header.hero{
   opacity:0.55;
   margin-top:4px;
 }
-.chat.in-view .b1{animation-delay:1.2s;}
-.chat.in-view .b2{animation-delay:2.9s;}
-.chat.in-view .b3{animation-delay:4.6s;}
-.chat.in-view .b4{animation-delay:6.3s;}
+.chat.in-view .b3{animation-delay:.4s;}
+.chat.in-view .b4{animation-delay:2.1s;}
 @keyframes rise{
   to{opacity:1; transform:translateY(0);}
 }
@@ -528,7 +532,8 @@ footer{
 }
 
 @media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr; gap:60px;}
+  header.hero{padding:48px 0 40px;}
+  .hero-grid{grid-template-columns:1fr; gap:32px;}
   .phone{transform:none;}
   .steps{grid-template-columns:1fr 1fr;}
 }
