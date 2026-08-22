@@ -4,13 +4,7 @@
 // El dia que cierres tu primer cliente de pago, sustituye null por un
 // objeto como el de abajo (descomenta y rellena) y se activa sola, sin
 // tocar nada mas del sitio.
-const resultadoReal = {
-  negocio: 'Barbería Cortés',
-  ciudad: 'Valencia',
-  cita: 'Antes se me acumulaban los WhatsApp por la noche y se me olvidaba responder a alguno. Ahora reservan solos y yo me entero cuando quiero.',
-  nombre: 'Marcos',
-  estadistica: '40% menos citas perdidas el primer mes',
-};
+const resultadoReal = null;
 
 /*
 const resultadoReal = {
