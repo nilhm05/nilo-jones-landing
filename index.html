@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<script src="assets/config.js"></script>
 </head>
 <body>
 
@@ -84,10 +85,6 @@
   </div>
 </section>
 
-<!-- Prueba social: cuando haya opiniones/numeros reales de clientes, va aqui,
-     antes de "Como funciona". Sugerencia: 2-3 tarjetas con foto+nombre+cita
-     corta, o metricas (citas gestionadas, tiempo de respuesta, etc). -->
-
 <section class="section" id="servicio">
   <div class="wrap">
     <div class="section-head">
@@ -120,7 +117,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="precio">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Servicio</span>
@@ -202,6 +199,37 @@
 <footer>
   Nilo Jones — Automatización para negocios locales
 </footer>
+
+<script>
+(function () {
+  if (typeof resultadoReal !== 'object' || !resultadoReal) return;
+  if (!resultadoReal.negocio || !resultadoReal.ciudad || !resultadoReal.cita || !resultadoReal.nombre) return;
+
+  var precio = document.getElementById('precio');
+  if (!precio) return;
+
+  var statHtml = resultadoReal.estadistica
+    ? '<div class="result-stat">' + resultadoReal.estadistica + '</div>'
+    : '';
+
+  var html =
+    '<section class="section">' +
+      '<div class="wrap">' +
+        '<div class="section-head">' +
+          '<span class="eyebrow">Caso real</span>' +
+          '<h2>Ya lo está usando alguien como tú</h2>' +
+        '</div>' +
+        '<div class="result-card">' +
+          '<p class="result-quote">' + resultadoReal.cita + '</p>' +
+          '<div class="result-author"><strong>' + resultadoReal.nombre + '</strong> — ' + resultadoReal.negocio + ', ' + resultadoReal.ciudad + '</div>' +
+          statHtml +
+        '</div>' +
+      '</div>' +
+    '</section>';
+
+  precio.insertAdjacentHTML('beforebegin', html);
+})();
+</script>
 
 <script>
 (function () {

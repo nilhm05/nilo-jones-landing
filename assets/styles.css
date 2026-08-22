@@ -485,6 +485,41 @@ header.hero{
   .price-box{text-align:left;}
 }
 
+/* ---------- RESULTADO REAL (prueba social) ---------- */
+.result-card{
+  background:var(--bg-surface);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:44px;
+}
+.result-quote{
+  font-family:'Space Grotesk', sans-serif;
+  font-size:1.25rem;
+  line-height:1.45;
+  margin-bottom:20px;
+}
+.result-quote::before{content:'\201C';}
+.result-quote::after{content:'\201D';}
+.result-author{
+  color:var(--text-muted);
+  font-size:0.92rem;
+}
+.result-author strong{
+  color:var(--text-primary);
+}
+.result-stat{
+  display:inline-flex;
+  align-items:center;
+  margin-top:18px;
+  padding:6px 14px;
+  border-radius:999px;
+  background:rgba(53,208,160,0.08);
+  border:1px solid rgba(53,208,160,0.25);
+  color:var(--accent-mint);
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.82rem;
+}
+
 /* ---------- FAQ ---------- */
 .faq{
   display:flex;
