@@ -97,6 +97,9 @@ header.hero{
   gap:56px;
   align-items:center;
 }
+.hero-grid > div:first-child{
+  text-align:center;
+}
 .eyebrow{
   display:inline-flex;
   align-items:center;
@@ -125,12 +128,13 @@ header.hero{
   font-size:1.08rem;
   color:var(--text-muted);
   max-width:480px;
-  margin-bottom:36px;
+  margin:0 auto 36px;
 }
 .hero-actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
+  justify-content:center;
 }
 .btn-primary{
   background:var(--accent-violet);
@@ -472,8 +476,9 @@ header.hero{
 /* ---------- SECTION HEADINGS ---------- */
 .section{padding:44px 0;}
 .section-head{
-  max-width:560px;
-  margin-bottom:52px;
+  max-width:620px;
+  margin:0 auto 52px;
+  text-align:center;
 }
 .section-head .eyebrow{margin-bottom:18px;}
 .section-head h2{
@@ -685,10 +690,12 @@ header.hero{
   background:var(--bg-surface);
   border:1px solid var(--line);
   border-radius:20px;
-  padding:40px;
+  padding:48px 40px;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  gap:40px;
+  gap:28px;
+  text-align:center;
 }
 .about-photo{
   flex-shrink:0;
@@ -714,11 +721,11 @@ header.hero{
   color:var(--text-muted);
   font-size:0.98rem;
   max-width:520px;
+  margin:0 auto;
 }
 
 @media (max-width:640px){
-  .about-card{flex-direction:column; text-align:center; padding:32px 24px;}
-  .about-text p{max-width:none;}
+  .about-card{padding:32px 24px;}
 }
 
 /* ---------- PRODUCTS / PRICING ---------- */
