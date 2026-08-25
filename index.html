@@ -33,7 +33,7 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">● Automatización para negocios locales</span>
+      <span class="eyebrow">● Automatización de citas para peluquerías y barberías</span>
       <h1>Tu negocio, <span>respondiendo solo.</span></h1>
       <p class="lead">Gestiono tus citas por WhatsApp de forma automática: reservas, recordatorios y peticiones de reseña, sin que tengas que estar pendiente del teléfono.</p>
       <div class="hero-actions">
@@ -61,7 +61,7 @@
             <div class="bubble out b1">Hola, ¿tenéis hueco mañana por la tarde?<span class="time">18:02</span></div>
             <div class="bubble in b2">¡Hola! Mañana por la tarde tengo libre a las 17:20 o las 18:00. ¿Cuál te viene mejor?<span class="time">18:02</span></div>
             <div class="bubble out b3">A las 17:20<span class="time">18:03</span></div>
-            <div class="bubble in b4">Cita apuntada para mañana a las 17:20, corte y barba (15€), gracias.<span class="time">18:03</span></div>
+            <div class="bubble in b4">Cita apuntada para mañana a las 17:20, corte y barba (15€), gracias.<span class="time">18:03</span><span class="confirm-check" aria-hidden="true">✓</span></div>
             <div class="typing"><span></span><span></span><span></span></div>
           </div>
         </div>
@@ -69,6 +69,34 @@
     </div>
   </div>
 </header>
+
+<section class="section problem-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">El problema</span>
+      <h2>Cada cita que no contestas a tiempo es un cliente menos.</h2>
+      <p>Lo que pasa cuando las citas se gestionan a mano, entre cliente y cliente.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <span class="problem-num mono">01</span>
+        <p>Te escriben pidiendo cita mientras estás con un cliente en la silla, y no puedes contestar.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-num mono">02</span>
+        <p>El cliente dice que viene y no confirma — no sabes si aparecerá o le tienes que guardar el hueco.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-num mono">03</span>
+        <p>Cada recordatorio de cita lo mandas tú a mano, uno por uno, la noche antes.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-num mono">04</span>
+        <p>Fuera de horario, si no contestas rápido, el cliente prueba con la peluquería de al lado.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="wrap">
@@ -117,6 +145,39 @@
   </div>
 </section>
 
+<section class="section calc-section" id="calculadora">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Calculadora</span>
+      <h2>¿Cuánto te está costando no automatizar?</h2>
+      <p>Mueve los sliders con tus propios números — el cálculo es en el momento, con lo que introduces tú.</p>
+    </div>
+    <div class="calc-card reveal">
+      <div class="calc-inputs">
+        <div class="calc-field">
+          <label for="calc-citas">Citas perdidas al mes <span class="calc-value mono" id="calc-citas-value">8</span></label>
+          <input type="range" id="calc-citas" min="0" max="30" step="1" value="8">
+        </div>
+        <div class="calc-field">
+          <label for="calc-precio">Precio medio del servicio <span class="calc-value mono" id="calc-precio-value">20€</span></label>
+          <input type="range" id="calc-precio" min="10" max="60" step="1" value="20">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-stat">
+          <span class="calc-stat-label">Dinero perdido al mes</span>
+          <span class="calc-stat-value mono" id="calc-dinero">160€</span>
+        </div>
+        <p class="calc-sentence">Con tu precio medio, recuperas el coste del bot con solo <strong class="mono" id="calc-citas-cubrir">5</strong> citas al mes que antes se perdían.</p>
+        <p class="calc-note">Cálculo con los datos que introduces tú — no es una estimación genérica.</p>
+      </div>
+    </div>
+    <div class="calc-cta">
+      <a class="btn-primary" href="https://wa.me/34638124140" target="_blank" rel="noopener">Quiero recuperar estas citas →</a>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="precio">
   <div class="wrap">
     <div class="section-head">
@@ -125,7 +186,7 @@
       <p>Todo incluido: instalación, configuración y mantenimiento.</p>
     </div>
     <div class="products-grid">
-      <div class="price-card">
+      <div class="price-card reveal">
         <div>
           <h3>Bot de citas automático</h3>
           <ul>
@@ -148,6 +209,22 @@
   </div>
 </section>
 
+<section class="section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Antes de decidir</span>
+      <h2>Aún no tengo clientes publicados aquí.</h2>
+    </div>
+    <div class="social-proof-grid">
+      <!-- reemplazar este bloque por reseñas reales cuando existan -->
+      <div class="social-proof-placeholder">
+        <p>Prefiero enseñarte resultados reales, no inventados. Mientras tanto, puedes probarlo con 30 días de prueba real y comprobarlo tú mismo.</p>
+        <a class="btn-primary" href="https://wa.me/34638124140" target="_blank" rel="noopener">Quiero probarlo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap">
     <div class="section-head">
@@ -156,27 +233,27 @@
       <p>Lo que casi todo el mundo pregunta antes de decidirse.</p>
     </div>
     <div class="faq">
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Tengo que cambiar de número de WhatsApp?<span class="faq-icon"></span></summary>
         <p>Sí. El sistema necesita un número dedicado, distinto del que ya usas a diario. Te ayudo a darlo de alta — puede ser una tarjeta SIM nueva o una línea que no estés usando ahora mismo.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Funciona si ya llevo las citas con otro sistema?<span class="faq-icon"></span></summary>
         <p>Si ya usas Google Calendar, papel o el propio WhatsApp, sí, sin cambiar de herramienta. Si usas una plataforma cerrada tipo Booksy, hay que migrar el calendario primero — te digo si tu caso encaja antes de empezar.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Qué pasa si no me convence?<span class="faq-icon"></span></summary>
         <p>No hay permanencia mínima: puedes darlo de baja cuando quieras avisando con 30 días. Y el primer mes de funcionamiento es de prueba real, así que lo decides con el sistema ya funcionando, no antes.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Sirve si somos varios profesionales en el local?<span class="faq-icon"></span></summary>
         <p>Sí, mismo precio con uno que con cinco. Cada profesional tiene su propio calendario y el sistema lo gestiona todo junto.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Cuánto tarda en estar listo?<span class="faq-icon"></span></summary>
         <p>La verificación de tu WhatsApp con Meta tarda de una a tres semanas y no depende de mí. Mientras tanto ya estamos configurando el resto, así que no es tiempo muerto.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item reveal">
         <summary>¿Mis clientes tienen que aprender algo nuevo?<span class="faq-icon"></span></summary>
         <p>No. Siguen escribiendo por WhatsApp exactamente como ahora — el cambio lo notas tú, no ellos.</p>
       </details>
@@ -186,7 +263,7 @@
 
 <section class="section" id="contacto">
   <div class="wrap">
-    <div class="contact">
+    <div class="contact reveal">
       <h2>¿Hablamos de tu negocio?</h2>
       <p>Cuéntame cómo gestionas las citas ahora mismo y te enseño cómo quedaría automatizado.</p>
       <div class="contact-actions">
@@ -250,6 +327,56 @@
     });
   }, { threshold: 0.4 });
   observer.observe(phone);
+})();
+</script>
+
+<script>
+(function () {
+  var citasInput = document.getElementById('calc-citas');
+  var precioInput = document.getElementById('calc-precio');
+  var citasValueEl = document.getElementById('calc-citas-value');
+  var precioValueEl = document.getElementById('calc-precio-value');
+  var dineroEl = document.getElementById('calc-dinero');
+  var citasCubrirEl = document.getElementById('calc-citas-cubrir');
+  if (!citasInput || !precioInput) return;
+
+  var PRECIO_BOT_MES = 89;
+
+  function actualizar() {
+    var citasPerdidas = parseInt(citasInput.value, 10);
+    var precioMedio = parseInt(precioInput.value, 10);
+    var dineroPerdidoMes = citasPerdidas * precioMedio;
+    var citasParaCubrirCoste = Math.ceil(PRECIO_BOT_MES / precioMedio);
+
+    citasValueEl.textContent = citasPerdidas;
+    precioValueEl.textContent = precioMedio + '€';
+    dineroEl.textContent = dineroPerdidoMes + '€';
+    citasCubrirEl.textContent = citasParaCubrirCoste;
+  }
+
+  citasInput.addEventListener('input', actualizar);
+  precioInput.addEventListener('input', actualizar);
+  actualizar();
+})();
+</script>
+
+<script>
+(function () {
+  var revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  revealEls.forEach(function (el) { observer.observe(el); });
 })();
 </script>
 
