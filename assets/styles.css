@@ -52,16 +52,41 @@ a{color:inherit; text-decoration:none;}
 
 /* ---------- NAV ---------- */
 nav{
-  position:sticky; top:0; z-index:50;
-  backdrop-filter:blur(14px);
-  background:rgba(10,13,18,0.92);
-  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:18px;
+  z-index:50;
+  display:flex;
+  justify-content:center;
+  padding:0 20px;
+  margin-bottom:18px;
 }
-nav .wrap{
-  height:72px;
+.nav-pill{
+  width:100%;
+  max-width:880px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:24px;
+  padding:12px 12px 12px 24px;
+  border-radius:999px;
+  background:rgba(10,13,18,0.85);
+  backdrop-filter:blur(14px);
+  border:1px solid var(--line);
+  box-shadow:0 10px 40px -12px rgba(0,0,0,0.55);
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.nav-links a{
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--text-muted);
+  transition:color .15s ease;
+}
+.nav-links a:hover{
+  color:var(--text-primary);
 }
 .brand{
   font-family:'Space Grotesk', sans-serif;
@@ -651,6 +676,7 @@ header.hero{
 
 @media (max-width:760px){
   .calc-card{grid-template-columns:1fr; gap:32px;}
+  .nav-links{display:none;}
 }
 
 /* ---------- STEPS ---------- */
