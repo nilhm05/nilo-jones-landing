@@ -96,10 +96,11 @@ nav{
   align-items:center;
   gap:10px;
 }
-.brand-dot{
-  width:9px; height:9px; border-radius:50%;
-  background:var(--accent-mint);
-  box-shadow:0 0 0 4px rgba(53,208,160,0.15);
+.brand svg{
+  width:27px;
+  height:27px;
+  flex-shrink:0;
+  display:block;
 }
 .nav-cta{
   background:var(--accent-violet);
